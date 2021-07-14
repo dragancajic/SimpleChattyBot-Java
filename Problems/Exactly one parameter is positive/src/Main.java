@@ -8,11 +8,11 @@ class Main {
         int number2 = scanner.nextInt();
         int number3 = scanner.nextInt();
         
-        if (number1 > 0 && number2 <= 0 && number3 <= 0) {
-            System.out.println(true);
-        } else if (number1 <= 0 && number2 > 0 && number3 <= 0) {
-            System.out.println(true);
-        } else if (number1 <= 0 && number2 <= 0 && number3 > 0) {
+        boolean num1Positive = number1 > 0 && number2 <= 0 && number3 <= 0;
+        boolean num2Positive = number1 <= 0 && number2 > 0 && number3 <= 0;
+        boolean num3Positive = number1 <= 0 && number2 <= 0 && number3 > 0;
+        
+        if (num1Positive || num2Positive || num3Positive) {
             System.out.println(true);
         } else {
             System.out.println(false);
